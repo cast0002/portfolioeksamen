@@ -26,118 +26,45 @@ p {
     color: blue;
     font-size: large;
 }
- .scrolling-text-container {
-     white-space: nowrap;
-     position: absolute;
-     top: 90vh;
-     left: 0;
-     transform: translateY(-50%);
-     animation: scrollText 90s linear infinite;
- }
- header {
-    padding: 20px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: space-between;
+.scrolling-text-container {
+    white-space: nowrap;
     position: absolute;
-    left: 61%;
-    font-family: 'Bechilo';
+    top: 125%;
+    left: 0;
+    transform: translateY(-50%);
+    overflow: hidden;
+    /* Hide overflow to prevent content from being visible outside the container */
+    width: 100%;
 }
 
-.menu li {
-  margin-right: 20px;
-}
-
-.menu a {
-    padding: 10px;
-    color: #0334f6;
-    text-decoration: none;
-}
-
-.menu a:hover {
-  color: #0004ff;
-}
-
-.burger-menu {
-    display: none;
-        flex-direction: column;
-        cursor: pointer;
-}
-
-
-/* MENU I MOBILEVIEW */
-@media screen and (max-width: 800px) {
-
-    .menu {
-        display: none;
-    }
-
-    .burger {
-        display: block;
-    }
-
-    .burger.active .line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-        transition: 0.2s linear;
-    }
-
-    .burger.active .line:nth-child(2) {
-        opacity: 0;
-        transition: 0.15s linear;
-    }
-
-    .burger.active .line:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-        transition: 0.2s linear;
-    }
-
-    nav.active .menu {
-        display: block;
-        position: absolute;
-        top: 149px;
-        right: 40px;
-        /* width: 100%; */
-        /* box-shadow: 0 0 10px rgba(123, 23, 23, 0.1); */
-        z-index: 2;
-    }
-nav.active .menu li {
-    margin: 10px 20px;
-    display: block;
-    /* Make list items visible */
-}
-
-nav.active .menu a:hover {
-    font-size: 20px;
-    color: #ff00ff;
-    /* Change to your desired pink color */
-}
-    li {
-        width: 100%;
-    }
-}
 @keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+
     100% {
         transform: translateX(-100%);
     }
 }
-
-.draggable {
-   width: 250px;
-    height: 200px;
-    position: absolute;
-    cursor: move;
+.scrolling-text-container p {
+    display: inline-block;
+    animation: scrollText 60s linear infinite;
+    animation-delay: -100s;
+    /* Adjust the negative delay to start before the page loads */
 }
+.draggable {
+    width: 250px;
+        height: 250px;
+        position: absolute;
+        cursor: move;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        margin: 10px;
+        justify-content: flex-start;
+    }
+    
   @media screen and (max-width: 600px) {
       .draggable {
           width: 100%;
@@ -163,13 +90,20 @@ nav.active .menu a:hover {
     pointer-events: none;
     transition: opacity 0.3s;
 }
- .images-container {
-     position: relative;
-     height: 70vh;
-    position: absolute;
-    top: 60%;
-    left: 5%;
-    }
+ .image-container-wrapper {
+     position: absolute;
+     top: 200%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 100vw;
+     /* Adjust the size as needed */
+     height: 1000px;
+     /* Adjust the size as needed */
+     overflow: hidden;
+     display: flex;
+    background-color: #7a90ff;
+    background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+ }
  
 .image-container {
     position: relative;
@@ -177,6 +111,7 @@ nav.active .menu a:hover {
     margin: 70px;
     margin-top: 450px;
     align-items: center;
+    left: 5%;
   
 }
  .hover-text {
@@ -192,156 +127,19 @@ nav.active .menu a:hover {
  .image-container:hover .hover-text {
      visibility: visible;
 }
-/* BURGER MENU I MOBILEVIEW*/
-header {
-    padding: 20px;
-}
-
-.logo img {
-    width: 37%;
-    height: auto;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    position: absolute;
-    left: 45%;
-}
-
-.menu li {
-  margin-right: 20px;
-} 
-
-.menu li:last-child {
-    margin-right: 0;
-}
-
-.menu a {
-    display: flex;
-    padding: 10px;
-    color: #000d3f;
-    text-decoration: none;
-    transition: color 0.3s;
-    text-align: end;
-    left: 50%;
-        /* Center the menu horizontally */
-        transform: translateX(-50%);
-        /* Adjust for centering */
-}
-
-.menu a:hover {
-    text-decoration: underline;
-    /* Tilføj understregningen ved hover */
-}
-
-/* .menu a:hover {
-  color: #221a13;
-} */
-
-.burger {
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    display: none;
-    /* Initially hidden on larger screens */
-}
-.burger .line {
-    width: 100%;
-    height: 2px;
-    background-color: #000d3f;
-    margin-bottom: 5px;
-    transition: 0.2s linear;
-}
-
-.burger {
-    display: none;
-}
-@media screen and (max-width: 767px) {
-    .burger {
-        display: block;
-        cursor: pointer;
-        /* Add cursor style to indicate it's clickable */
-    }
-
-    .menu {
-        display: none;
-        /* Additional styles for mobile menu */
-    }
-
-    .menu.active {
-        display: block;
-    }
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 15px;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li {
-    margin-right: 20px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-.burger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.line {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-}
-
-/* Media query for small screens */
-@media screen and (max-width: 767px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+    .draggable {
         width: 100%;
-        background-color: #333;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu li {
+        /* Make the draggable items full width on small screens */
         margin: 10px 0;
+        /* Adjust margin for spacing */
     }
 
-    .burger-menu {
-        display: flex;
+    .image-container-wrapper {
+        flex-direction: column;
+        /* Stack items vertically on small screens */
+        height: 4000px;
+        top: 400%;
     }
 }
