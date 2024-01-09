@@ -5,33 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORSIDE</title>
+    <link rel="icon" type="image/x-icon" href="logoportfolio.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
-    <nav class="btn-pluss-wrapper">
-        <div class="btn-pluss">
-            <ul>
-                <li><a href="index.html">FORSIDE</a></li>
-                <li><a href="about.html">OM MIG</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-            </ul>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logoportfolio.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">FORSIDE</a></li>
+            <li><a href="about.html">OM MIG</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+        </ul>
+
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
     </nav>
-    <header>
-        <p>CARMFIA</p>
-        <div class="scrolling-text-container">
-            <p>CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺
-                CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺
-                CARMFIA ✺ CARMFIA ✺
-                CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺
-                CARMFIA ✺ CARMFIA ✺
-                CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺
-                CARMFIA ✺ CARMFIA ✺
-                CARMFIA ✺ CARMFIA ✺ </p>
-        </div>
-    </header>
+
+    <div class="scroll-to-bottom-button" onclick="scrollToBottom()">
+        <img src="sunburst.svg" alt="Scroll to Bottom">
+        <div class="click-text">🡣</div>
+    </div>
+
+
+    <img class="top-image" src="carmfiaimage.png" alt="carm">
+
+    <div class="scrolling-text-container">
+        <p>CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺
+            CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺
+            CARMFIA ✺ CARMFIA ✺
+            CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺
+            CARMFIA ✺ CARMFIA ✺
+            CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺ CARMFIA ✺
+            CARMFIA ✺ CARMFIA ✺
+            CARMFIA ✺ CARMFIA ✺ </p>
+    </div>
+
     <div class="image-container-wrapper">
 
         <div class="image-container">
@@ -75,6 +93,8 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="menu.js"></script>
+
 </body>
 
 </html>
