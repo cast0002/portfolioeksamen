@@ -76,31 +76,24 @@
  /*scroll*/
 
         function scrollToBottom() {
-            // Scroll to the bottom of the page
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         }
      
     function scrollToBottom() {
-        // Set a custom scroll distance (adjust this value as needed)
         const customScrollDistance = 2000;
-
-        // Scroll to the custom distance
         window.scrollTo({
             top: customScrollDistance,
             behavior: 'smooth'
         });
     }
             function scrollToBottom() {
-            // Set a custom scroll distance (adjust this value as needed)
             const customScrollDistance = 2000;
-
-            // Scroll to the custom distance
             window.scrollTo({
                 top: customScrollDistance,
                 behavior: 'smooth'
             });
         }
-/*about*/
+/*om mig*/
 const popImage = document.getElementById("popImage");
 
 function handleScroll() {
