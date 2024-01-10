@@ -10,7 +10,7 @@
     font-weight: normal;
     font-style: normal;
 }
-/* generel*/
+/* generel styling*/
 body {
     margin: 0;
     box-sizing: border-box;
@@ -19,6 +19,7 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
     max-width: 100vw;
         overflow-x: hidden;
+        font-family:monospace;
 }
 p {
     font-family: Hekate;
@@ -118,7 +119,7 @@ p {
  .image-container:hover .hover-text {
      visibility: visible;
 }
-/* Media query for mobile devices */
+/* Media query mobil version */
 @media screen and (max-width: 600px) {
     .draggable {
         width: 100%;
@@ -148,7 +149,7 @@ p {
     vertical-align: middle;
     top: 5px;
 }
-/* BURGER MENU I MOBILEVIEW*/
+/* BURGER MENU I mobil version*/
 header {
     padding: 20px;
 }
@@ -160,14 +161,14 @@ nav {
     justify-content: space-between;
 }
 
-.menu {
-    display: flex;
+.menu {display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
+    justify-content: center;
     position: absolute;
-    left: 40%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -182,7 +183,7 @@ nav {
     text-decoration: none;
     transition: color 0.3s;
     text-align: end;
-    font-family: 'Bechilo';
+    font-family: 'Hekate';
 }
 
 .menu a:hover {
@@ -210,7 +211,7 @@ nav {
     display: none;
 }
 
-/* MENU I MOBILEVIEW */
+/* MENU I mobil version */
 @media screen and (max-width: 800px) {
 
     .menu,
@@ -348,20 +349,18 @@ nav {
 .tekst1 {
     text-align: center;
     padding-bottom: 2rem;
-    font-family: "p";
 }
 
 .tekst2 {
     margin: 20px;
     padding-top: 7rem;
-    font-family: "p";
 }
 
 .tekst3 {
     margin: 20px;
     padding-top: 1rem;
-    font-family: "p";
 }
+
 
 .billede_container {
     display: flex;
@@ -420,40 +419,30 @@ nav {
     }
 
     .tekst1 {
-        font-size: larger;
         color:black;
-        font-size: 20px;
         left: 450px;
       }
 
     .tekst2 {
-        font-family: "p";
         position: absolute;
-        top: 130px;
+        top: 135px;
         left: 550px;
-        font-size: 20px;
         right: 50px;
-        color: rgb(0, 0, 0);
-    }
 
-    .tekst3 {
-        font-family: "p";
-            position: absolute;
-            top: 560px;
-            left: 550px;
-            font-size: 20px;
-            right: 50px;
-            color: rgb(0, 0, 0);
+
     }
         .tekst4 {
-            font-family: "p";
             position: absolute;
             top: 805px;
             left: 5px;
-            font-size: 20px;
             right: 50px;
-            color: rgb(0, 0, 0);
         }
+                .tekst3 {
+                    position: absolute;
+                    top: 590px;
+                    left: 550px;
+                    right: 50px;
+                   }
 
     .billede_container {
         display: flex;
@@ -480,8 +469,6 @@ nav {
     }
 
     .tekst4 {
-        font-size: larger;
-        text-align: center;
         padding-bottom: 1rem;
     }
 }
@@ -506,3 +493,49 @@ h1 {
                      align-items: center;
                      height: 60vh;
                  }
+.iframe-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+ h2,
+ a {
+     display: inline-block;
+     margin-right: 20px;
+     font-family: 'Courier New', Courier, monospace;
+ }
+.link-container {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 100px;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tekst1,
+.tekst2,
+.tekst3,
+.tekst4,
+.billede_container, .text1, .text2, .text3, .text4 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+}
+
+.centered-text {
+    text-align: center;
+}
+footer {
+    padding: 2rem 4rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+footer img {
+    margin-top: 10px;
+    max-width: 10%;
+}
